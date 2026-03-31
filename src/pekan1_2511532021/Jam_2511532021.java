@@ -1,4 +1,6 @@
 package pekan1_2511532021;
+import java.util.Scanner;
+
 
 public class Jam_2511532021 {
 	private int hh;
@@ -16,6 +18,27 @@ public class Jam_2511532021 {
 		this.mm = m;
 		this.ss = s;
 	}
+	
+	//konstruktor 2
+	public static Jam_2511532021 buatJamDariInput( Scanner sc) {
+		int h,m,s;
+		while(true) {
+			System.out.println("Masukkan Jam (0-23)\t: ");
+			h = sc.nextInt();
+			System.out.println("Masukkan Menit (0-59)\t: ");
+			m = sc.nextInt();
+			System.out.println("Masukkan Detik (0-59)\t: ");
+			s = sc.nextInt();
+			
+			if (Jam_2511532021.isValid(h, m, s)) {
+				return new Jam_2511532021(h,m,s);
+			}
+			else {
+				System.out.println("[ERROR] Input Tidak Valid, Silahkan Ulangi Lagi");
+			}
+		}
+	}
+		
 	
 	//Selektor
 	public int getHour() {return hh;}
