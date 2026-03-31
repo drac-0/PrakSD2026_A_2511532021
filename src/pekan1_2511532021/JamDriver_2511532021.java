@@ -11,5 +11,4 @@ public class JamDriver_2511532021 {
 		System.out.println("durasi(a,b)\t = " + Jam_2511532021.durasiDetik(a, b) );
 		System.out.println("a.compareTo(b)\t = " + a.compareTo(b));
 	}
-
 }
