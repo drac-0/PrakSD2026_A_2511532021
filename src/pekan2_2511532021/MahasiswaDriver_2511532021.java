@@ -80,7 +80,7 @@ public class MahasiswaDriver_2511532021 {
 				tambahkanMahasiswa_2511532021(mahasiswalist, scanner);
 				break;
 			case 2:
-				tampilkanSemuaMahasiswa_2511532021(mahasiswalist);
+				hapusMahasiswa_2511532021(mahasiswalist, scanner);
 				break;
 			case 3:
 				cariMahasiswa_2511532021(mahasiswalist, scanner);
@@ -88,10 +88,8 @@ public class MahasiswaDriver_2511532021 {
 			case 4:
 				System.out.println("KELUAR DARI PROGRAM");
 				break;
-				
 			case 5:
-				cariMahasiswa_2511532021(mahasiswalist, scanner);
-			
+				break;
 				
 			default:
 				System.out.println("Pilihan tidak valid.");
