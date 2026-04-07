@@ -89,6 +89,10 @@ public class MahasiswaDriver_2511532021 {
 				System.out.println("KELUAR DARI PROGRAM");
 				break;
 				
+			case 5:
+				cariMahasiswa_2511532021(mahasiswalist, scanner);
+			
+				
 			default:
 				System.out.println("Pilihan tidak valid.");
 			}
