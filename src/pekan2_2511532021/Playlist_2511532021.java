@@ -2,7 +2,7 @@ package pekan2_2511532021;
 import java.util.*;
 
 public class Playlist_2511532021 {
-	
+	//CHANGE COMMIT MESSAGE
 	static ArrayList<Musik_2511532021> listPlaylist_2021 = new ArrayList<>();
 	static Scanner input = new Scanner(System.in);
 	
