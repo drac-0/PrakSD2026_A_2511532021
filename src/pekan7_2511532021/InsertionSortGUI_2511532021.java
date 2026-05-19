@@ -102,38 +102,39 @@ public class InsertionSortGUI_2511532021 extends JFrame {
     		labelArray_2021[k].setHorizontalAlignment(SwingConstants.CENTER);
     		panelArray_2021.add(labelArray_2021[k]);
     	}
+    	stepButton_2021.setEnabled(true);
     	panelArray_2021.revalidate();
     	panelArray_2021.repaint();
 
     }
     private void performStep() {
-    	if (i_2021 < array_2021.length && sorting_2021) {
-    		int key_2021 = array_2021[i_2021];
-    		j_2021 = i_2021 - 1;
-    		
-    		StringBuilder stepLog_2021 = new StringBuilder();
-    		stepLog_2021.append("Langkah : ").append(stepCount_2021).
-    		append(": Memasukkan ").append(key_2021).append("\n");
-    		
-    		while(j_2021 >= 0 && array_2021[j_2021] > key_2021) {
-    			array_2021[j_2021 + 1] = array_2021[j_2021];
-    		}
-    		array_2021[j_2021 + 1] = array_2021[j_2021];
-    		
-    		updateLabels();
-    		stepLog_2021.append("Hasil : ").append(arrayToString(array_2021)).append("\n\n");
-    		stepArea_2021.append(stepLog_2021.toString());
-    		
-    		i_2021++;
-    		stepCount_2021++;
-    		
-    		if(i_2021 == array_2021.length) {
-    			sorting_2021 = false;
-    			stepButton_2021.setEnabled(false);
-    			JOptionPane.showMessageDialog(this, "Sorting Selesai");
-    		}
-    				
-    	}
+        if (i_2021 < array_2021.length && sorting_2021) {
+            int key_2021 = array_2021[i_2021];
+            j_2021 = i_2021 - 1;
+
+            StringBuilder stepLog_2021 = new StringBuilder();
+            stepLog_2021.append("Langkah : ").append(stepCount_2021)
+                        .append(": Memasukkan ").append(key_2021).append("\n");
+
+            while (j_2021 >= 0 && array_2021[j_2021] > key_2021) {
+                array_2021[j_2021 + 1] = array_2021[j_2021];
+                j_2021--;  // ✅ decrement j so the loop eventually ends
+            }
+            array_2021[j_2021 + 1] = key_2021;  // ✅ place key in correct position
+
+            updateLabels();
+            stepLog_2021.append("Hasil : ").append(arrayToString(array_2021)).append("\n\n");
+            stepArea_2021.append(stepLog_2021.toString());
+
+            i_2021++;
+            stepCount_2021++;
+
+            if (i_2021 == array_2021.length) {
+                sorting_2021 = false;
+                stepButton_2021.setEnabled(false);
+                JOptionPane.showMessageDialog(this, "Sorting Selesai");
+            }
+        }
     }
     private void updateLabels() {
     	for (int k = 0 ; k < array_2021.length; k++) {
