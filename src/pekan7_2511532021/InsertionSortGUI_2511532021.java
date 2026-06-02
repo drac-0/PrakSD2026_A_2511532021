@@ -118,9 +118,9 @@ public class InsertionSortGUI_2511532021 extends JFrame {
 
             while (j_2021 >= 0 && array_2021[j_2021] > key_2021) {
                 array_2021[j_2021 + 1] = array_2021[j_2021];
-                j_2021--;  // ✅ decrement j so the loop eventually ends
+                j_2021--;  
             }
-            array_2021[j_2021 + 1] = key_2021;  // ✅ place key in correct position
+            array_2021[j_2021 + 1] = key_2021;  
 
             updateLabels();
             stepLog_2021.append("Hasil : ").append(arrayToString(array_2021)).append("\n\n");
